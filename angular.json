@@ -37,6 +37,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeflex/primeflex.min.css",
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
