@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class StudentFormComponent {
   studentForm: FormGroup;
 
+  @Output()
+  studentSubmitted = new EventEmitter();
 
   constructor(private fb: FormBuilder) {
     this.studentForm = this.fb.group({
@@ -20,6 +22,11 @@ export class StudentFormComponent {
     });
   }
   onsubmit(): void {
-    console.log(this.studentForm.value);
+    if (this.studentForm.invalid) {
+      this.studentForm.markAllAsTouched();
+    } else {
+      this.studentSubmitted.emit(this.studentForm.value);
+      this.studentForm.reset();
+    }
   }
 }
