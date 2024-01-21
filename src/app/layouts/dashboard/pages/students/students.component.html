@@ -11,16 +11,10 @@
     <td mat-cell *matCellDef="let student">{{ student.id }}</td>
   </ng-container>
 
-  <!-- FirstName Column -->
-  <ng-container matColumnDef="firstName">
-    <th mat-header-cell *matHeaderCellDef>First Name</th>
-    <td mat-cell *matCellDef="let student">{{ student.firstName }}</td>
-  </ng-container>
-
-  <!-- Last Name Column -->
-  <ng-container matColumnDef="lastName">
-    <th mat-header-cell *matHeaderCellDef>Last Name</th>
-    <td mat-cell *matCellDef="let student">{{ student.lastName }}</td>
+  <!-- FullName Column -->
+  <ng-container matColumnDef="fullName">
+    <th mat-header-cell *matHeaderCellDef>Full Name</th>
+    <td mat-cell *matCellDef="let student">{{ student | fullName }}</td>
   </ng-container>
 
   <!-- Email Column -->

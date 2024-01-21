@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { StudentsModule } from './pages/students/students.module';
+import { PipesModule } from './pages/pipes/pipes.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StudentsModule } from './pages/students/students.module';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    StudentsModule
+    StudentsModule,
+    PipesModule
   ],
   exports: [
     DashboardComponent

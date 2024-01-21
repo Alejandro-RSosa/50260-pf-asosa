@@ -7,7 +7,7 @@ import { Students } from './models';
   styleUrl: './students.component.scss'
 })
 export class StudentsComponent {
-  displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'role'];
+  displayedColumns: string[] = ['id', 'fullName', 'email', 'role'];
   dataSource: Students[] = [
     {
       "id": 1,
