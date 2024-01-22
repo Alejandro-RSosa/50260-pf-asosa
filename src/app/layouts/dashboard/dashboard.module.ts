@@ -9,6 +9,7 @@ import { StudentsModule } from './pages/students/students.module';
 import { PipesModule } from './pages/pipes/pipes.module';
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent
@@ -20,7 +21,8 @@ import { PipesModule } from './pages/pipes/pipes.module';
     MatToolbarModule,
     MatIconModule,
     StudentsModule,
-    PipesModule
+    PipesModule,
+
   ],
   exports: [
     DashboardComponent
