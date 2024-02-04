@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import { StudentsModule } from './layouts/dashboard/pages/students/students.module';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { StudentsModule } from './layouts/dashboard/pages/students/students.modu
     AppRoutingModule,
     BrowserAnimationsModule,
     DashboardModule,
-    StudentsModule
+    StudentsModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
