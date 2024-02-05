@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../../../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { RouterModule } from '@angular/router';
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
+    MatIconModule,
     ReactiveFormsModule,
     SharedModule,
     RouterModule,

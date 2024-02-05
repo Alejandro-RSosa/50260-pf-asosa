@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
 import { LoadingService } from './core/services/loading.service';
 
 @Component({
@@ -10,13 +9,14 @@ import { LoadingService } from './core/services/loading.service';
 export class AppComponent {
   title = '50260-pf-asosa';
 
-  // isLoading$ = Observable<boolean>;
   isLoading = false;
 
   constructor(private loadingService: LoadingService) {
-    this.loadingService.loadingTrigger$.subscribe({
+    this.loadingService.isLoading$.subscribe({
       next: (value) => {
-        this.isLoading = value;
+        setTimeout(() => {
+          this.isLoading = value;
+        })
       },
     });
   }

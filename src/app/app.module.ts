@@ -8,6 +8,7 @@ import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import { StudentsModule } from './layouts/dashboard/pages/students/students.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AuthModule } from './layouts/auth/auth.module';
+import { HomeModule } from './layouts/dashboard/pages/home/home.module';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AuthModule } from './layouts/auth/auth.module';
     DashboardModule,
     StudentsModule,
     MatProgressSpinnerModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

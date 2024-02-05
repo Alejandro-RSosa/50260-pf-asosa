@@ -6,9 +6,9 @@ import { Subject } from 'rxjs';
 })
 export class LoadingService {
 
-  loadingTrigger$ = new Subject<boolean>();
+  private loadingTrigger$ = new Subject<boolean>();
 
-  // public isLoading$ = this.loadingTrigger$.asObservable();
+  public isLoading$ = this.loadingTrigger$.asObservable();
 
   setIsLoading(value: boolean): void {
     this.loadingTrigger$.next(value);

@@ -12,6 +12,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { StudentsComponent } from './pages/students/students.component';
 
+
+
 @NgModule({
   declarations: [
     DashboardComponent
@@ -24,6 +26,7 @@ import { StudentsComponent } from './pages/students/students.component';
     MatIconModule,
     StudentsModule,
     MatListModule,
+
     RouterModule.forChild([
       {
         path: "home",
@@ -32,6 +35,10 @@ import { StudentsComponent } from './pages/students/students.component';
       {
         path: "students",
         component: StudentsComponent,
+      },
+      {
+        path: "courses",
+        loadChildren: () => import('./pages/courses/courses.module').then((m) => m.CoursesModule)
       },
       {
         path: "**",

@@ -19,4 +19,11 @@ export class AlertsService {
   showAlert(options: SweetAlertOptions): void {
     this.notifications$.next(options);
   }
+  showSuccess(title: string, msg: string): void {
+    this.notifications$.next({
+      icon: 'success',
+      title,
+      text: msg,
+    })
+  }
 }
