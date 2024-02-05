@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../../../shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { SharedModule } from '../../../../shared/shared.module';
     MatButtonModule,
     ReactiveFormsModule,
     SharedModule,
-
+    RouterModule,
   ],
   exports: [
     StudentsComponent

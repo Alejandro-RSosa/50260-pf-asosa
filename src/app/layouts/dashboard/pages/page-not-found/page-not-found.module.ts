@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
-
+import { PageNotFoundComponent } from './page-not-found.component';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule
   ],
 })
-export class AuthModule { }
+export class PageNotFoundModule { }

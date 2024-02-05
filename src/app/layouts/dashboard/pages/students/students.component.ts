@@ -3,6 +3,7 @@ import { Students } from './models';
 import { Observable } from 'rxjs';
 import { LoadingService } from '../../../../core/services/loading.service';
 
+
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
@@ -97,9 +98,7 @@ export class StudentsComponent {
     this.dataSource = [...this.dataSource, event];
   }
   constructor(private loadingService: LoadingService) {
-
     this.getStudents();
-
   }
 
   getStudents(): void {
@@ -119,4 +118,5 @@ export class StudentsComponent {
       },
     });
   }
+
 }

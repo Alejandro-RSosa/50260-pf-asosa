@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './layouts/dashboard/dashboard.module';
 import { StudentsModule } from './layouts/dashboard/pages/students/students.module';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { AuthModule } from './layouts/auth/auth.module';
 
 
 @NgModule({
@@ -18,9 +18,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AuthModule,
     DashboardModule,
     StudentsModule,
-    MatProgressBarModule,
     MatProgressSpinnerModule,
   ],
   providers: [],
