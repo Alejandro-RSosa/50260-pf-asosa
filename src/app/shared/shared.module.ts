@@ -6,17 +6,20 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ValidationErrorsPipe } from './validation-errors.pipe';
 
 
 @NgModule({
   declarations: [
     FullNamePipe,
     FontSize20Directive,
+    ValidationErrorsPipe,
   ],
   imports: [
     CommonModule
@@ -28,11 +31,13 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
+    MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    ValidationErrorsPipe,
   ]
 })
 export class SharedModule { }

@@ -9,8 +9,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../../../../shared/shared.module';
-import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { StudentsRoutingModule } from './students-routing.module';
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
     ReactiveFormsModule,
     SharedModule,
-    RouterModule,
+    StudentsRoutingModule,
   ],
   exports: [
     StudentsComponent

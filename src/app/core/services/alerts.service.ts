@@ -26,4 +26,11 @@ export class AlertsService {
       text: msg,
     })
   }
+  showError(title: string, msg: string): void {
+    this.notifications$.next({
+      icon: 'error',
+      title,
+      text: msg,
+    })
+  }
 }
