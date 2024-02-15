@@ -9,6 +9,7 @@ import { StudentsModule } from './layouts/dashboard/pages/students/students.modu
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AuthModule } from './layouts/auth/auth.module';
 import { HomeModule } from './layouts/dashboard/pages/home/home.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HomeModule } from './layouts/dashboard/pages/home/home.module';
     StudentsModule,
     MatProgressSpinnerModule,
     HomeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

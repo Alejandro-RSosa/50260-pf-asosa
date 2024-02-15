@@ -11,6 +11,7 @@ import { StudentsModule } from './pages/students/students.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { adminGuard } from '../../core/guards/admin.guard';
+import { StudentsDetailComponent } from './pages/students/students-detail/students-detail.component';
 
 
 
@@ -36,6 +37,10 @@ import { adminGuard } from '../../core/guards/admin.guard';
         path: "students",
         canActivate: [adminGuard],
         loadChildren: () => import('./pages/students/students.module').then((m) => m.StudentsModule)
+      },
+      {
+        path: 'students/:id',
+        component: StudentsDetailComponent,
       },
       {
         path: "courses",

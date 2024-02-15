@@ -3,6 +3,7 @@ import { Students } from './models';
 import { LoadingService } from '../../../../core/services/loading.service';
 import { StudentsService } from '../../../../core/services/students.service';
 import { forkJoin } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -17,8 +18,11 @@ export class StudentsComponent implements OnInit {
 
   constructor(
     private studentsService: StudentsService,
-    private loadingService: LoadingService
-  ) { }
+    private loadingService: LoadingService,
+    private route: ActivatedRoute
+  ) {
+    console.log(this.route.snapshot.queryParams)
+   }
 
   ngOnInit(): void {
     this.getAllData()
@@ -26,7 +30,6 @@ export class StudentsComponent implements OnInit {
 
   getAllData(): void {
     this.loadingService.setIsLoading(true)
-
     forkJoin([
       this.studentsService.getRoles(),
       this.studentsService.getStudents()

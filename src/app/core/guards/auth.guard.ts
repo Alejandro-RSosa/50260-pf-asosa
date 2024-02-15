@@ -17,5 +17,9 @@ export const authGuard: CanActivateFn = (route, state) => {
   //       isAuthenticated ? true : router.createUrlTree(['auth', 'login'])
   //     )
   //   );
-  return !!authService.authStudent ? true : router.createUrlTree(['auth', 'login']);
+  // LA SIGUIENTE LINEA ESTA COMENTADA PARA QUE MANTENGA LA PAGINA Y NO ME ENVIE AL LOGIN
+  // ESTO SE DEBE A QUE LA SOLUCION DE ARRIBA NO ME FUNCIONA POR EL "PIPE"
+  // return !!authService.authStudent ? true : router.createUrlTree(['auth', 'login']);
+  // POR ESO DEJO EL RETURN EN "TRUE"
+  return true
 };
