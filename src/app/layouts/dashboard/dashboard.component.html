@@ -2,21 +2,29 @@
   <mat-drawer #drawer class="dashboard-sidebar" mode="side">
     <mat-nav-list>
       <a
-      #homeLink="routerLinkActive"
-      routerLinkActive
-      [activated]="homeLink.isActive"
-      routerLink="home" mat-list-item>Home</a>
+        #homeLink="routerLinkActive"
+        routerLinkActive
+        [activated]="homeLink.isActive"
+        routerLink="home"
+        mat-list-item
+        >Home</a
+      >
       <a
-
-      #studentsLink="routerLinkActive"
-      routerLinkActive
-      [activated]="studentsLink.isActive"
-      routerLink="students" mat-list-item>Students</a>
+        #studentsLink="routerLinkActive"
+        routerLinkActive
+        [activated]="studentsLink.isActive"
+        routerLink="students"
+        mat-list-item
+        >Students</a
+      >
       <a
-      #coursesLink="routerLinkActive"
-      routerLinkActive
-      [activated]="coursesLink.isActive"
-      routerLink="courses" mat-list-item>Courses</a>
+        #coursesLink="routerLinkActive"
+        routerLinkActive
+        [activated]="coursesLink.isActive"
+        routerLink="courses"
+        mat-list-item
+        >Courses</a
+      >
 
       <!-- <a routerLink="" mat-list-item>Classes</a> -->
 
@@ -27,11 +35,20 @@
   <div class="example-sidenav-content">
     <p>
       <mat-toolbar color="primary">
-        <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <button
+          (click)="drawer.toggle()"
+          mat-icon-button
+          class="example-icon"
+          aria-label="Example icon-button with menu icon"
+        >
           <mat-icon>menu</mat-icon>
         </button>
         <span>Inicio</span>
-        <span class="example-spacer"></span>
+        <span style="flex: 1"></span>
+        <div *ngIf="authStudent$ | async; let student">
+          <span>{{ student.firstName }} {{ student.lastName }}</span>
+          <p class="m-0">{{ student.email }}</p>
+        </div>
       </mat-toolbar>
     </p>
     <div class="p-5">

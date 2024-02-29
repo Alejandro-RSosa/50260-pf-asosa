@@ -6,4 +6,5 @@ export interface Students {
   email: string;
   password: string;
   role: string;
+  token: string;
 }

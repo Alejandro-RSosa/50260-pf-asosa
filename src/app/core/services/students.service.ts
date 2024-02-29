@@ -17,6 +17,18 @@ export class StudentsService {
 
   constructor(private alerts: AlertsService, private httpClient: HttpClient) {}
 
+
+  generateString(length: number) {
+    const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = ' ';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
+
   getStudenById(id: number | string): Observable<Students | undefined> {
     return this.httpClient.get<Students>(`${environment.apiURL}/students/${id}`);
   }
@@ -30,7 +42,7 @@ export class StudentsService {
   }
 
   createStudents(payload: Students) {
-    return this.httpClient.post<Students>(`${environment.apiURL}/students`, payload).pipe(mergeMap(() => this.getStudents()))
+    return this.httpClient.post<Students>(`${environment.apiURL}/students`, {...payload, token: this.generateString(15)}).pipe(mergeMap(() => this.getStudents()))
   }
 
   deleteStudent(studentID: number) {
