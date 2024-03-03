@@ -48,4 +48,8 @@ export class StudentsService {
   deleteStudent(studentID: number) {
     return this.httpClient.delete<Students>(`${environment.apiURL}/students/${studentID}`).pipe(mergeMap(() => this.getStudents()))
   }
+
+  getAllStudentsToInscript(): Observable<Students[]> {
+    return this.httpClient.get<Students[]>(`${environment.apiURL}/students?role=toInscript`)
+  }
 }

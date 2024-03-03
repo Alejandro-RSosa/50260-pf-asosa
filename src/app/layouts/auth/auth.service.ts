@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Students } from '../dashboard/pages/students/models';
 import { Router } from '@angular/router';
 import { AlertsService } from '../../core/services/alerts.service';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, catchError, map, of, tap } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment.development';
 import { Store } from '@ngrx/store';
@@ -69,6 +69,8 @@ export class AuthService {
         localStorage.removeItem('token');
         return false;
       }
-    }))
+    }),
+    catchError(() => of(false))
+    )
   }
 }

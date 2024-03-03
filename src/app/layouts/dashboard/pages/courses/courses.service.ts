@@ -2,6 +2,8 @@ import { Injectable } from "@angular/core";
 import { delay, finalize, of } from "rxjs";
 import { Courses } from "./models";
 import { LoadingService } from "../../../../core/services/loading.service";
+import { HttpClient } from "@angular/common/http";
+import { environment } from "../../../../../environments/environment.development";
 
 
 let courses: Courses[] = [
@@ -25,18 +27,18 @@ let courses: Courses[] = [
 @Injectable()
 export class CoursesService {
 
-  constructor(private loadingService: LoadingService) {}
+  constructor(private loadingService: LoadingService, private httpClient: HttpClient) { }
 
   getCourses() {
     this.loadingService.setIsLoading(true);
-    return of(courses)
-    .pipe(delay(1000),
-    finalize(() =>
-    this.loadingService.setIsLoading(false)));
+    return this.httpClient.get<Courses[]>(`${environment.apiURL}/courses`)
+      .pipe(delay(1000),
+        finalize(() =>
+          this.loadingService.setIsLoading(false)));
   }
 
   createCourse(data: Courses) {
-    courses = [...courses, {...data, id: courses.length+1}];
+    courses = [...courses, { ...data, id: courses.length + 1 }];
     return this.getCourses();
   }
 

@@ -15,7 +15,7 @@
       "lastName": "Smith",
       "email": "alice.smith@email.com",
       "password": "pass456",
-      "role": "Student",
+      "role": "Admin",
       "token": "ljnsdflgjknsofghn2"
     },
     {
@@ -24,7 +24,7 @@
       "lastName": "Johnson",
       "email": "bob.johnson@email.com",
       "password": "qwerty789",
-      "role": "Student",
+      "role": "Admin",
       "token": "ljnsdflgjknsofghn3"
     },
     {
@@ -46,14 +46,52 @@
       "token": "ljnsdflgjknsofghn5"
     },
     {
-      "id": "9706",
-      "firstName": "asd",
-      "lastName": "asd",
-      "email": "a@a",
-      "password": "asd",
-      "role": "Student",
-      "token": " C27gQNQ64MATa6O"
+      "id": "20",
+      "firstName": "Pepe",
+      "lastName": "Potamo",
+      "email": "pepe@email.com",
+      "password": "123",
+      "role": "toInscript",
+      "token": "ljnsdflgjknsofghn20"
     }
   ],
-  "classes": []
+  "courses": [
+    {
+      "id": 1,
+      "courseName": "Angular",
+      "startDate": "2024-02-29T23:41:05.410Z"
+    },
+    {
+      "id": 2,
+      "courseName": "React",
+      "startDate": "2024-02-29T23:41:05.410Z"
+    },
+    {
+      "id": 3,
+      "courseName": "NodeJS",
+      "startDate": "2024-02-29T23:41:05.410Z"
+    }
+  ],
+  "inscriptions": [
+    {
+      "id": "99ae",
+      "userId": "20",
+      "courseId": 2
+    },
+    {
+      "id": "596d",
+      "studentId": "20",
+      "courseId": 1
+    },
+    {
+      "id": "16c2",
+      "studentId": "20",
+      "courseId": 3
+    },
+    {
+      "id": "42ab",
+      "studentId": "20",
+      "courseId": 1
+    }
+  ]
 }
